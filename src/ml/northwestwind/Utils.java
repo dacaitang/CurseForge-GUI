@@ -6,12 +6,15 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
@@ -318,6 +321,10 @@ public class Utils {
     }
 
     public static boolean readYesNo() {
+        if (!GraphicsEnvironment.isHeadless()) {
+            int result = JOptionPane.showConfirmDialog(null, MainGUI.getLastLogLines(), "Action required", JOptionPane.YES_NO_OPTION);
+            return result == JOptionPane.YES_OPTION;
+        }
         Scanner scanner = new Scanner(System.in);
         String res = scanner.nextLine();
         return res.equalsIgnoreCase("y");

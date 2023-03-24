@@ -44,7 +44,7 @@ public class Config {
     }
 
     public static void load() {
-        File config = new File(Constants.ABSOLUTE_PATH + File.separator + "cf.json");
+        File config = new File(/*Constants.ABSOLUTE_PATH + File.separator + */ "cf.json");
         if (!config.exists()) createDefaultConfig();
         JSONParser parser = new JSONParser();
         try {

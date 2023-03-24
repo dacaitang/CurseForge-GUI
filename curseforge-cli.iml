@@ -7,8 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="commons-io-2.11" level="application" />
-    <orderEntry type="library" exported="" name="jansi-2.0.1" level="application" />
-    <orderEntry type="library" exported="" name="json-simple-1.1.1" level="application" />
+    <orderEntry type="library" name="commons.io" level="project" />
+    <orderEntry type="library" name="googlecode.json.simple" level="project" />
   </component>
 </module>
