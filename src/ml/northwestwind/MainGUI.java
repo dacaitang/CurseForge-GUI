@@ -117,7 +117,7 @@ public class MainGUI extends JFrame {
             super.done();
             try {
                 get();
-                JOptionPane.showMessageDialog(MainGUI.this, "Task finisned!");
+                JOptionPane.showMessageDialog(MainGUI.this, "Task finished!");
             } catch (Throwable th) {
                 th.printStackTrace();
                 JOptionPane.showMessageDialog(MainGUI.this, "An error occurred during installation. Check latestlog.txt for more details.");
