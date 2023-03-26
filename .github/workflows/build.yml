@@ -17,7 +17,7 @@ jobs:
         run:
           bash gradlew build
       - name: Upload artifact
-          uses: actions/upload-artifact@v2
-          with:
-            name: CurseForge-GUI
-            path: build/libs
+        uses: actions/upload-artifact@v2
+        with:
+          name: CurseForge-GUI
+          path: build/libs
