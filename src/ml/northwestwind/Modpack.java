@@ -92,7 +92,7 @@ public class Modpack {
                 copyFromOverride(packFolder.getAbsolutePath(), (String) manifestJson.get("overrides"));
                 downloadMods(packFolder.getAbsolutePath());
                 String thumb = downloadThumb(json);
-                genProfile(name, "." + File.separator + Config.modpackDir.getName() + File.separator + packFolder.getName(), thumb, getModVersion(manifestJson));
+                genProfile(name, "." + File.separator + "curseforge-cli" + File.separator + Config.modpackDir.getName() + File.separator + packFolder.getName(), thumb, getModVersion(manifestJson));
                 //genProfile(name, packFolder.getAbsolutePath(), thumb, getModVersion(manifestJson));
                 System.out.println(Ansi.ansi().fg(Ansi.Color.GREEN).a("Finished download of " + name).reset());
             } catch (Exception e) {
